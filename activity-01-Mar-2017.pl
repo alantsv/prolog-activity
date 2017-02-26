@@ -27,3 +27,4 @@ participante(2, c).
 %g) ?- findall(Aluno,participante(Aluno,_),L),sort(L,O),length(O,X).
 %h) ?- findall(Prof,turma(_,_,Prof),L),sort(L,O),length(O,X).
 %i)
+
