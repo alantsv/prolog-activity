@@ -25,10 +25,10 @@
  participante(2,c).
 
 % c.1) Mostre só os professores, com código;
-% ?- findall(CdPessoa-Nome,(pessoa(CdPessoa,Nome,_),turma(_,_,CdPessoa)),L).
+% ?- findall(CdPessoa-Nome,(pessoa(CdPessoa,Nome,_),turma(_,_,CdPessoa)),L), sort(L,O).
 
 % c.2) Mostre só os alunos, com código
-% ?- findall(CdPessoa-Nome,(pessoa(CdPessoa,Nome,_),participante(CdPessoa,Turma)),L).
+% ?- findall(CdPessoa-Nome,(pessoa(CdPessoa,Nome,_),participante(CdPessoa,Turma)),L), sort(L,O).
 
 % c.3) Mostre só as turmas, com código
 % ?- findall(CdTurma-Nome, turma(CdTurma,Nome,_),L).
@@ -43,7 +43,7 @@
 % todos os campos como uma folha de freqüência de uma turma: 
 % nome e código da turma, nome e código do professor, 
 % nome e código e fone de cada aluno (como abaixo). 
-% ?- findall(CdTurma|NmTurma|CdProf|Prof|CdAluno|Aluno|Fone,(turma(CdTurma,NmTurma,CdProf),pessoa(CdProf,Prof,_),participante(CdAluno,CdTurma),pessoa(CdAluno,Aluno,Fone)),L).
+% ?- findall(CdTurma|NmTurma|CdProf|Prof|CdAluno|Aluno|Fone,(turma(CdTurma,NmTurma,CdProf),pessoa(CdProf,Prof,_),participante(CdAluno,CdTurma),pessoa(CdAluno,Aluno,Fone)),L), sort(L,O).
 
 % c.7) Quantos alunos existem?
 % ?- findall(Aluno,participante(Aluno,_),L),sort(L,O),length(O,X).
